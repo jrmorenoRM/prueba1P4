@@ -7,23 +7,23 @@ app.get('/', (peticion, respuesta) => {
     
 });
 
-app.get('/pagina/:numero', (peticion, respuesta) => {
+app.get('/:numero', (peticion, respuesta) => {
     // Servir archivo HTML, o cualquier otro archivo
    let opcion=peticion.params.numero
-   let tabla ={}
-    switch(opcion){
-        case 1:
-            tabla={
-                   "1":1 
-            }
+   let tabla =[]
+    
 
-        break;
+       for(i=1; i<=10; i++){
+         tabla.push({
+            "Multiplicando":opcion,
+            "Multiplicador": i,
+            "Producto":opcion*i
+        })
+       }
+   
 
-    }
-
-
-
-    respuesta.json(tabla);
+   
+ 
 });
 
 
