@@ -22,7 +22,7 @@ app.get('/:numero', (peticion, respuesta) => {
        }
    
 
-   
+    respuesta.json(tabla);
  
 });
 
