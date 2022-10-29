@@ -7,6 +7,26 @@ app.get('/', (peticion, respuesta) => {
     
 });
 
+app.get('/pagina/:numero', (peticion, respuesta) => {
+    // Servir archivo HTML, o cualquier otro archivo
+   let opcion=peticion.params.numero
+   let tabla ={}
+    switch(opcion){
+        case 1:
+            tabla={
+                   "1":1 
+            }
+
+        break;
+
+    }
+
+
+
+    respuesta.json(tabla);
+});
+
+
 
 
 
